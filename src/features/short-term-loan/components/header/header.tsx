@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { ExitButton, StepCrumb } from './components';
 
 import * as Styled from './header.styled';
@@ -20,16 +21,15 @@ export const Header = (props: HeaderProps) => {
 			<Styled.Title>הלוואה לזמן קצר</Styled.Title>
 			<Styled.Steps>
 				{steps.map((step, index) => (
-					<>
+					<Fragment key={step + index}>
 						<StepCrumb
-							key={step + index}
 							isActive={currentStep === index}
 							isDone={currentStep > index}
 							index={index}
 							crumbText={step}
 						/>
 						{index < steps.length - 1 ? <Styled.Gap /> : null}
-					</>
+					</Fragment>
 				))}
 			</Styled.Steps>
 			<ExitButton onClick={exitButtonHandler} />
