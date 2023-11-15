@@ -47,3 +47,11 @@ export const InputLabel = styled.label`
 	font-family: 'loan-400';
 	line-height: 1.8rem;
 `;
+
+export const RadioButtonGroup = styled.div`
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2.4rem;
+`;
