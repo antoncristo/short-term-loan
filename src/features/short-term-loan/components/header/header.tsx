@@ -23,8 +23,8 @@ export const Header = (props: HeaderProps) => {
 					<>
 						<StepCrumb
 							key={step + index}
-							isActive={currentStep === index + 1}
-							isDone={currentStep > index + 1}
+							isActive={currentStep === index}
+							isDone={currentStep > index}
 							index={index}
 							crumbText={step}
 						/>
