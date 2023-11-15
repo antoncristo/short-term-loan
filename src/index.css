@@ -3,6 +3,14 @@ html {
 	font-size: 10px;
 }
 
+:root {
+	--box-shadow: 3px 5px 16px 0px #bacadd59;
+	--main: #2d72e1;
+	--secondary: #ebf2ff;
+	--ternary: #e0eafa;
+	--grey1: #5d5d67;
+}
+
 body {
 	margin: 0;
 	padding: 0;
