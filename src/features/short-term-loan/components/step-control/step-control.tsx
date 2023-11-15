@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { Button } from 'shared';
 
 import * as Styled from './step-control.styled';
+import { steps } from 'features/short-term-loan/config';
 
 interface StepControlProps {
 	children: ReactNode;
@@ -19,6 +20,7 @@ export const StepControl = (props: StepControlProps) => {
 
 	const onSubmit = () => {
 		setDone(true);
+		next();
 	};
 
 	const resetHandler = () => {
@@ -29,9 +31,9 @@ export const StepControl = (props: StepControlProps) => {
 	return (
 		<Styled.StepControl>
 			<Styled.StepContent>{children}</Styled.StepContent>
-			<Styled.Controls>
+			<Styled.Controls isConfirmed={done}>
 				<Button
-					disabled={currentStep === 0}
+					disabled={currentStep === 0 || currentStep === steps.length - 1}
 					onClick={prev}
 					width='6.9rem'
 					variant='secondary'
@@ -45,7 +47,7 @@ export const StepControl = (props: StepControlProps) => {
 				) : (
 					<Button
 						disabled={!isFormValid}
-						onClick={canSubmit ? onSubmit : next}
+						onClick={canSubmit && currentStep === steps.length - 2 ? onSubmit : next}
 						width='20.9rem'
 						variant='primary'
 					>

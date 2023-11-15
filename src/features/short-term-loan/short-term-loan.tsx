@@ -45,7 +45,7 @@ export const ShortTermLoan = () => {
 		<Styled.ShortTermLoan>
 			<Header steps={steps} currentStep={currentStep} />
 			<StepControl
-				canSubmit={isValid && currentStep === steps.length - 1}
+				canSubmit={isValid && currentStep === steps.length - 2}
 				currentStep={currentStep}
 				isFormValid={isValid}
 				next={nextStepHandler}
@@ -59,8 +59,20 @@ export const ShortTermLoan = () => {
 								<LoanDetails watch={watch} getValues={getValues} control={control} />
 							</form>
 						),
-						1: <LoanConfirmation />,
-						2: <LoanConfirmation />
+						1: (
+							<LoanConfirmation
+								title='סיכום פרטי ההלוואה'
+								subTitle='רגע לפני אישור, אנחנו ממליצים לוודא את פרטי הבקשה'
+								loan={getValues()}
+							/>
+						),
+						2: (
+							<LoanConfirmation
+								title='ההוראה הועברה לסבב חתימות'
+								subTitle='אישור 3421 | 21.02.2023, 15:54'
+								loan={getValues()}
+							/>
+						)
 					}[currentStep]
 				}
 			</StepControl>

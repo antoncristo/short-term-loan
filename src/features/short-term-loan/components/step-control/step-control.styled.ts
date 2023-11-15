@@ -13,11 +13,14 @@ export const StepContent = styled.div`
 	overflow-y: auto;
 `;
 
-export const Controls = styled.footer`
+export const Controls = styled.footer<{ isConfirmed: boolean }>`
+	box-sizing: border-box;
 	padding: 0 3.5rem 0 5rem;
 	margin: 0;
 	height: 14rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-top: 0.1rem solid
+		${({ isConfirmed }) => (isConfirmed ? 'var(--secondary)' : 'transparent')};
 `;
