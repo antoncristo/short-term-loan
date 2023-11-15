@@ -1,8 +1,3 @@
-import { TestComponent } from 'components';
+import { ShortTermLoan } from 'features';
 
-export const App = () => (
-	<div>
-		<h1>Vite App</h1>
-		<TestComponent />
-	</div>
-);
+export const App = () => <ShortTermLoan />;

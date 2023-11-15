@@ -1,4 +1,45 @@
+html {
+	direction: rtl;
+	font-size: 10px;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'loan-400';
+}
+
+@font-face {
+	font-family: 'loan-200';
+	src: url('./assets/fonts/Assistant-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'loan-300';
+	src: url('./assets/fonts/Assistant-Light.ttf');
+}
+
+@font-face {
+	font-family: 'loan-400';
+	src: url('./assets/fonts/Assistant-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'loan-500';
+	src: url('./assets/fonts/Assistant-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'loan-600';
+	src: url('./assets/fonts/Assistant-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'loan-700';
+	src: url('./assets/fonts/Assistant-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'loan-800';
+	src: url('./assets/fonts/Gluten-ExtraBold.ttf');
 }
