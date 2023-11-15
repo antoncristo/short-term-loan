@@ -7,7 +7,10 @@ export const StepControl = styled.div`
 `;
 
 export const StepContent = styled.div`
+	box-sizing: border-box;
 	height: calc(100% - 14rem);
+	padding-top: 3.7rem;
+	overflow-y: auto;
 `;
 
 export const Controls = styled.footer`
