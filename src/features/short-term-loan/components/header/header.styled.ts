@@ -8,6 +8,10 @@ export const Header = styled.header`
 	height: var(--header-desktop-height);
 	border-bottom: 0.1rem solid var(--ternary);
 	padding: 2.4rem 8rem 2.4rem 2.4rem;
+
+	@media print {
+		display: none;
+	}
 `;
 
 export const Title = styled.h1`

@@ -23,4 +23,23 @@ export const Controls = styled.footer<{ isConfirmed: boolean }>`
 	justify-content: space-between;
 	border-top: 0.1rem solid
 		${({ isConfirmed }) => (isConfirmed ? 'var(--secondary)' : 'transparent')};
+
+	@media print {
+		display: none;
+	}
+`;
+
+export const PrintLoan = styled.button`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	border: none;
+	padding: 0.6rem 0.8rem;
+	background-color: transparent;
+
+	font-size: 1.4rem;
+	font-family: 'loan-700';
+	line-height: 1.8rem;
+	cursor: pointer;
 `;

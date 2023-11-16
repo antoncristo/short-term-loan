@@ -16,6 +16,8 @@ export const LoanConfirmation = (props: LoanConfirmationProps) => {
 		payments: 'תשלומים'
 	};
 
+	console.log(loan);
+
 	const showPaymentsMeta = loan.type === 'payments';
 
 	return (
@@ -42,7 +44,7 @@ export const LoanConfirmation = (props: LoanConfirmationProps) => {
 							</Styled.ConfirmationBox>
 							<Styled.ConfirmationBox>
 								<Styled.CTitle>תאריך פירעון</Styled.CTitle>
-								<Styled.CValue>{payments?.numberOfPayment} לכל חודש</Styled.CValue>
+								<Styled.CValue>{payments?.depositDate} לכל חודש</Styled.CValue>
 							</Styled.ConfirmationBox>
 						</>
 					) : null}
