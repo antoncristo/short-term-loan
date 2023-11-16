@@ -16,8 +16,6 @@ export const LoanConfirmation = (props: LoanConfirmationProps) => {
 		payments: 'תשלומים'
 	};
 
-	console.log(loan);
-
 	const showPaymentsMeta = loan.type === 'payments';
 
 	return (
